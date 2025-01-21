@@ -1,4 +1,7 @@
 #!/bin/zsh
+# Michael J. Foster
+# github.com/mjfos2r
+# 2025-JAN-13
 
 function usage() {
     echo "Usage: $0 [-h] [-l] [-1 | -0 | -c | -j] <instance>"
@@ -66,7 +69,7 @@ if [[ $# -eq 2 ]]; then
             ;;
         "-j")
             echo "Connecting to gcp instance: $INSTANCE with port forwarding!"
-            echo "Initializing jupyer-lab server!"
+            echo "Initializing jupyter-lab server!"
             REMOTE_CMD='
               echo "Current PATH: $PATH"
               echo "Sourcing conda..."
