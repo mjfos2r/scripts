@@ -1,7 +1,7 @@
 #!/bin/zsh
-# Or /bin/bash if on server ;)
+# /bin/bash #if on server ;)
 # Michael J. Foster
-# github.com/mjfos2r/scripts/fs_utils/tgz.sh # maybe this?
+# github.com/mjfos2r
 
 function usage() {
     echo "Usage: $0 [-h] [-v | -d] -i <input> [-o <output>]"

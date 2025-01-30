@@ -1,4 +1,7 @@
 #!/bin/bash
+# Michael J. Foster
+# github.com/mjfos2r
+
 # Script name
 SCRIPT_NAME=$(basename "$0")
 
@@ -6,12 +9,11 @@ SCRIPT_NAME=$(basename "$0")
 verbose=false
 input_file=""
 output_dir="."
-count=1
 
 # Function to display usage
 usage() {
     cat << EOF
-Usage: ${SCRIPT_NAME} [-h] [-v] [-i INPUT_FILE] [-o OUTPUT_DIR] [-c COUNT]
+Usage: ${SCRIPT_NAME} [-h] [-v] [-i INPUT_FILE] [-o OUTPUT_DIR] 
 
 A template script showing argument parsing and usage.
 
@@ -20,7 +22,6 @@ Options:
     -v          Enable verbose output
     -i FILE     Input file to process
     -o DIR      Output directory (default: current directory)
-    -c NUMBER   Number of iterations (default: 1)
 
 Examples:
     ${SCRIPT_NAME} -i input.txt -o /path/to/output -c 5
@@ -38,7 +39,7 @@ log() {
 }
 
 # Parse args 
-while getopts "hvi:o:c:" opt; do
+while getopts "hvi:o:" opt; do
     case ${opt} in
         h)
             usage
@@ -51,9 +52,6 @@ while getopts "hvi:o:c:" opt; do
             ;;
         o)
             output_dir=$OPTARG
-            ;;
-        c)
-            count=$OPTARG
             ;;
         \?)
             echo "Invalid option: -$OPTARG" 1>&2
