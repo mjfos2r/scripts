@@ -85,7 +85,7 @@ if [[ $# -eq 2 ]]; then
             REMOTE_CMD='
               echo "Current PATH: $PATH"
               echo "Sourcing conda..."
-              source $(find ~ -type f -wholename "*/etc/profile.d/conda.sh")
+              source $(find ~ -type f -wholename "*/miniconda3/etc/profile.d/conda.sh")
               echo "Activating conda base..."
               conda activate base
               echo "Conda environment: $CONDA_PREFIX"
